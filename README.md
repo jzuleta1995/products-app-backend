@@ -7,4 +7,4 @@ This is the guide to start the backend service made in Nodejs.
 3. Third, you need to have installed MongoDB and create the products_db database on localhost.
 4. Finally, run the npm run start command to start the rest api.
 
-Note: default Port is 4000, this port mustn't be in use to start the rest api
+Note: The default port is 4000, this port mustn't be in use to start the rest api

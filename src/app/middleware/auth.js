@@ -4,7 +4,7 @@ const TOKEN_HEADER = 'x-auth-token';
 
 module.exports = function(req, res, next){
     const token = req.header(TOKEN_HEADER);
-
+    
     if(!token){
         return res.status(401).json({msg: 'Not Token, Invalid permission!'})
     }
@@ -14,6 +14,7 @@ module.exports = function(req, res, next){
         req.user = encryption.user;
         next();
     }catch(error){
+        console.log(error);
         res.status(401).json({msg: 'Token Invalid'});
     }
 }
